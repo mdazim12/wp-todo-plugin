@@ -27,16 +27,7 @@ if( !defined ('ABSPATH')){
 
 
 
- register_deactivation_hook(__FILE__,'wpdoto_deactivaton');
- function wpdoto_deactivaton(){
-    echo 'jjjjjjjjj';
- }
-
- register_uninstall_hook(__FILE__,'wpdoto_uninstall');
- function wpdoto_uninstall(){
-    var_dump('Plugin uninstall success!');
-    exit();
- }
+ 
 
 
 
