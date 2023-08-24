@@ -25,6 +25,14 @@ if( !defined ('ABSPATH')){
     echo 'hellpw';
  }
 
+//action Hook
+
+add_action( 'save_post', 'wpdoto_save_callback' );
+
+function wpdoto_save_callback(){
+   var_dump('saved Post');
+   exit( );
+}
 
 
  
