@@ -22,7 +22,7 @@ if( !defined ('ABSPATH')){
  register_activation_hook(__FILE__,'wpdoto_activation');
 
  function wpdoto_activation(){
-    echo 'hellpw';
+    do_action( 'wpdoto_install_message' );
  }
 
 //action Hook
@@ -33,6 +33,14 @@ function wpdoto_save_callback(){
    var_dump('saved Post');
    exit( );
 }
+
+add_action( 'wpdoto_install_message','wpdoto_message' );
+function wpdoto_message(){
+   var_dump('Successfully Plugin Installed');
+   exit();
+}
+
+
 
 
  
